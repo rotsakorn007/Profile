@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaogam's Profile | รสกร คงพุท</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Prompt & Sarabun -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Prompt', 'Sarabun', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fefce8',
+                            100: '#fef9c3',
+                            200: '#fef08a',
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            900: '#713f12',
+                        },
+                        dark: {
+                            950: '#09090b',
+                            900: '#18181b',
+                            800: '#27272a',
+                            700: '#3f3f46',
+                            400: '#a1a1aa',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #facc15 0%, #f59e0b 50%, #eab308 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+        }
+        .tech-card {
+            background: rgba(24, 24, 27, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(250, 204, 21, 0.1);
+        }
+        .tech-card:hover {
+            border-color: rgba(250, 204, 21, 0.4);
+            box-shadow: 0 0 15px rgba(250, 204, 21, 0.1);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .floating-element {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-dark-950 text-zinc-100 font-sans min-h-screen selection:bg-brand-400 selection:text-dark-950 overflow-x-hidden">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-dark-950/80 backdrop-blur-md border-b border-zinc-800/50 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center text-dark-950 font-bold text-lg shadow-md shadow-brand-400/20">
+                    KK
+                </div>
+                <span class="font-semibold text-lg tracking-wide hidden sm:block text-zinc-100">Khaogam.Profile</span>
+            </a>
+            
+            <nav class="flex items-center space-x-1 sm:space-x-4">
+                <a href="#about" class="px-3 py-2 rounded-lg text-sm font-medium text-zinc-400 hover:text-brand-400 hover:bg-zinc-900 transition">เกี่ยวกับฉัน</a>
+                <a href="#education" class="px-3 py-2 rounded-lg text-sm font-medium text-zinc-400 hover:text-brand-400 hover:bg-zinc-900 transition">การศึกษา</a>
+                <a href="#contact" class="px-4 py-2 rounded-lg text-sm font-semibold bg-brand-400 text-dark-950 hover:bg-brand-500 transition shadow-md shadow-brand-400/10">ติดต่อฉัน</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="pt-24 pb-16">
+        
+        <!-- Hero Section -->
+        <section class="max-w-6xl mx-auto px-4 py-12 md:py-20 flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+            <!-- Left Info -->
+            <div class="flex-1 space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center space-x-2 bg-yellow-950/40 border border-brand-500/30 rounded-full px-4 py-1.5 text-brand-400 text-sm font-medium shadow-sm">
+                    <span class="flex h-2 w-2 relative">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-400"></span>
+                    </span>
+                    <span>ยินดีต้อนรับสู่โปรไฟล์ของฉัน</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+                    สวัสดีค่ะ, ฉันชื่อ <br>
+                    <span class="gradient-text">รสกร คงพุท</span>
+                </h1>
+                
+                <p class="text-xl text-zinc-300 font-medium">
+                    ชื่อเล่น <span class="text-brand-400 font-bold border-b-2 border-brand-400/30 pb-1">ข้าวแก้ม</span> 🌾💛
+                </p>
+                
+                <p class="text-zinc-400 max-w-lg leading-relaxed text-sm sm:text-base mx-auto md:mx-0">
+                    ปัจจุบันเป็นนักศึกษาสาขาวิชาวิศวกรรมคอมพิวเตอร์และระบบอัตโนมัติ ผู้มีความสนใจในการพัฒนาเทคโนโลยี ซอฟต์แวร์ และระบบควบคุมอัจฉริยะเพื่อตอบโจทย์โลกยุคอนาคต
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 pt-2">
+                    <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-400 text-dark-950 font-semibold hover:bg-brand-500 transition duration-200 text-center shadow-lg shadow-brand-400/20 flex items-center justify-center space-x-2">
+                        <i class="fa-regular fa-paper-plane"></i>
+                        <span>ติดต่อฉันเลย</span>
+                    </a>
+                    <a href="#about" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-dark-900 border border-zinc-800 text-zinc-300 font-medium hover:bg-zinc-800 hover:text-white transition duration-200 text-center flex items-center justify-center space-x-2">
+                        <span>เรียนรู้เพิ่มเติมเกี่ยวกับฉัน</span>
+                        <i class="fa-solid fa-arrow-down text-xs text-brand-400"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right Graphic / Image -->
+            <div class="flex-1 flex justify-center items-center relative">
+                <!-- Background Decorative Tech Shapes -->
+                <div class="absolute w-72 h-72 bg-brand-400 rounded-full filter blur-3xl opacity-10 -top-4 -left-4"></div>
+                <div class="absolute w-72 h-72 bg-yellow-600 rounded-full filter blur-3xl opacity-10 -bottom-4 -right-4"></div>
+                
+                <!-- Main Photo Container (Incorporating Uploaded 6459.jpg) -->
+                <div class="relative w-72 h-96 sm:w-80 sm:h-[420px] rounded-3xl overflow-hidden shadow-2xl border-4 border-zinc-800 bg-dark-900 floating-element hover:shadow-brand-400/10 transition-shadow duration-500">
+                    <!-- Photo Display with custom focus on student portrait -->
+                    <img src="6459.jpg" alt="รสกร คงพุท (ข้าวแก้ม)" class="w-full h-full object-cover object-[center_20%] transition-transform duration-500 hover:scale-105" onerror="this.style.display='none'; document.getElementById('avatar-fallback').classList.remove('hidden');">
+                    
+                    <!-- Fallback if image path error occurs -->
+                    <div id="avatar-fallback" class="hidden absolute inset-0 bg-gradient-to-tr from-zinc-900 to-zinc-800 flex flex-col items-center justify-center text-center p-6">
+                        <div class="w-24 h-24 rounded-full bg-brand-400 flex items-center justify-center text-dark-950 text-4xl font-extrabold mb-4">K</div>
+                        <h3 class="text-lg font-bold text-white">Khaogam</h3>
+                    </div>
+
+                    <!-- Tech Badge Overlay on Image -->
+                    <div class="absolute bottom-4 left-4 right-4 bg-dark-950/90 backdrop-blur-md border border-zinc-800/80 p-4 rounded-2xl flex items-center justify-between">
+                        <div class="text-left">
+                            <h3 class="text-sm font-bold text-white">รสกร คงพุท</h3>
+                            <p class="text-[10px] text-brand-400 font-semibold uppercase tracking-wider">Computer Eng & Automation</p>
+                        </div>
+                        <div class="w-8 h-8 rounded-lg bg-yellow-950 border border-brand-500/30 flex items-center justify-center text-brand-400 text-xs">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="max-w-6xl mx-auto px-4 py-16">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-white">ข้อมูลส่วนตัว (About Me)</h2>
+                <div class="w-16 h-1 gradient-bg mx-auto mt-3 rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Age & Birthdate -->
+                <div class="tech-card rounded-2xl p-6 shadow-sm transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-yellow-950 text-brand-400 border border-brand-500/20 flex items-center justify-center mb-4 text-xl shadow-inner">
+                        <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">วันเกิด & อายุ</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        เกิดวันที่ <span class="font-semibold text-zinc-200">22 มกราคม พ.ศ. 2550</span> (22/01/2007)
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-zinc-800 flex justify-between items-center">
+                        <span class="text-xs text-zinc-500">อายุปัจจุบัน</span>
+                        <span class="px-3 py-1 rounded-full bg-brand-400 text-dark-950 font-bold text-sm">19 ปี</span>
+                    </div>
+                </div>
+                
+                <!-- Card 2: Field of Interest -->
+                <div class="tech-card rounded-2xl p-6 shadow-sm transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-yellow-950 text-brand-400 border border-brand-500/20 flex items-center justify-center mb-4 text-xl shadow-inner">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">สิ่งที่สนใจ</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        มุ่งเน้นการเขียนโปรแกรม คอมพิวเตอร์ระบบควบคุมอัตโนมัติ (Automation System) และ IoT เพื่อประยุกต์ใช้งานจริง
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-zinc-800 flex justify-between items-center">
+                        <span class="text-xs text-zinc-500">เป้าหมาย</span>
+                        <span class="px-3 py-1 rounded-full bg-zinc-800 text-brand-400 border border-zinc-700/50 font-bold text-xs">วิศวกรคอมพิวเตอร์</span>
+                    </div>
+                </div>
+                
+                <!-- Card 3: Personality -->
+                <div class="tech-card rounded-2xl p-6 shadow-sm transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-xl bg-yellow-950 text-brand-400 border border-brand-500/20 flex items-center justify-center mb-4 text-xl shadow-inner">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white mb-2">ตัวตนของข้าวแก้ม</h3>
+                    <p class="text-zinc-400 text-sm leading-relaxed">
+                        เป็นคนชอบเรียนรู้สิ่งใหม่ๆ มุ่งมั่น มีความรับผิดชอบ และพร้อมที่จะพัฒนาตนเองอยู่เสมอผ่านความท้าทายในระดับมหาวิทยาลัย
+                    </p>
+                    <div class="mt-4 pt-4 border-t border-zinc-800 flex justify-between items-center">
+                        <span class="text-xs text-zinc-500">งานอดิเรก</span>
+                        <span class="px-3 py-1 rounded-full bg-zinc-800 text-brand-400 border border-zinc-700/50 font-bold text-xs">ศึกษาเทคโนโลยี, โค้ดดิ้ง</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Timeline -->
+        <section id="education" class="max-w-6xl mx-auto px-4 py-16 bg-zinc-900/40 border border-zinc-800/50 rounded-3xl my-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-white">ประวัติการศึกษา (Education)</h2>
+                <div class="w-16 h-1 gradient-bg mx-auto mt-3 rounded-full"></div>
+                <p class="text-zinc-400 text-sm mt-4">จากก้าวแรกในโรงเรียนมัธยม สู่เส้นทางวิศวกรระบบและคอมพิวเตอร์ในระดับอุดมศึกษา</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto relative pl-8 border-l-2 border-brand-400/40 space-y-12 py-4">
+                
+                <!-- Education Item 1: Current -->
+                <div class="relative">
+                    <!-- Timeline Dot -->
+                    <div class="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-dark-950 border-4 border-brand-400 flex items-center justify-center shadow-lg shadow-brand-400/20">
+                        <div class="w-1.5 h-1.5 bg-brand-400 rounded-full"></div>
+                    </div>
+                    
+                    <div class="tech-card rounded-2xl p-6 shadow-sm border border-brand-400/20 transition">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 bg-brand-400 text-dark-950 text-xs font-bold rounded-full self-start">ปัจจุบัน</span>
+                            <span class="text-sm font-medium text-zinc-500 flex items-center">
+                                <i class="fa-regular fa-calendar-check mr-1.5 text-brand-400"></i> 2568 - ปัจจุบัน
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">ระดับปริญญาตรี</h3>
+                        <p class="text-brand-400 font-semibold mb-3">คณะวิศวกรรมศาสตร์และเทคโนโลยีอุตสาหกรรม</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-4">
+                            สาขาวิชาวิศวกรรมคอมพิวเตอร์และระบบอัตโนมัติ (Computer and Automation Engineering)
+                        </p>
+                        
+                        <!-- Highlights of Major -->
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="text-xs bg-zinc-800 text-zinc-300 px-3 py-1.5 rounded-lg font-medium"><i class="fa-solid fa-microchip mr-1 text-brand-400"></i> คอมพิวเตอร์ & ฮาร์ดแวร์</span>
+                            <span class="text-xs bg-zinc-800 text-zinc-300 px-3 py-1.5 rounded-lg font-medium"><i class="fa-solid fa-robot mr-1 text-brand-400"></i> ระบบอัตโนมัติ</span>
+                            <span class="text-xs bg-zinc-800 text-zinc-300 px-3 py-1.5 rounded-lg font-medium"><i class="fa-solid fa-code mr-1 text-brand-400"></i> พัฒนาซอฟต์แวร์</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Item 2: High School -->
+                <div class="relative">
+                    <!-- Timeline Dot -->
+                    <div class="absolute -left-[41px] top-1.5 w-6 h-6 rounded-full bg-dark-950 border-4 border-zinc-700 flex items-center justify-center">
+                        <div class="w-1.5 h-1.5 bg-zinc-500 rounded-full"></div>
+                    </div>
+                    
+                    <div class="tech-card rounded-2xl p-6 shadow-sm transition">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 bg-zinc-800 text-zinc-400 text-xs font-bold rounded-full self-start">ศิษย์เก่า</span>
+                            <span class="text-sm font-medium text-zinc-500 flex items-center">
+                                <i class="fa-regular fa-calendar mr-1.5 text-zinc-500"></i> สำเร็จการศึกษา
+                            </span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-1">ระดับมัธยมศึกษา</h3>
+                        <p class="text-zinc-300 font-semibold mb-3">โรงเรียนกันทรารมณ์ จังหวัดศรีสะเกษ</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed">
+                            สถาบันการศึกษาอันเปี่ยมด้วยคุณค่าที่เป็นฐานรากความรู้ทางวิทยาศาสตร์และคณิตศาสตร์ ช่วยจุดประกายความฝันและส่งเสริมสู่การเรียนต่อในระดับวิศวกรรมศาสตร์
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="max-w-6xl mx-auto px-4 py-16">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-white">ช่องทางการติดต่อ (Contact)</h2>
+                <div class="w-16 h-1 gradient-bg mx-auto mt-3 rounded-full"></div>
+                <p class="text-zinc-400 text-sm mt-4">ยินดีเสมอที่จะทำความรู้จักและพูดคุยเรื่องงานหรือการทำโครงงานต่างๆ ร่วมกันค่ะ</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-zinc-900 border border-zinc-800 text-white rounded-3xl p-8 shadow-2xl relative overflow-hidden">
+                    <!-- Background tech lines decoration -->
+                    <div class="absolute right-0 bottom-0 w-48 h-48 bg-brand-400/5 rounded-full translate-x-12 translate-y-12 blur-2xl"></div>
+                    
+                    <div class="relative z-10 flex flex-col md:flex-row items-center gap-8">
+                        <!-- Left Info -->
+                        <div class="flex-1 space-y-6">
+                            <h3 class="text-2xl font-bold text-brand-400">ข้อมูลติดต่อหลัก</h3>
+                            <p class="text-zinc-400 text-sm leading-relaxed">
+                                สามารถติดต่อทางอีเมลนักศึกษาหรือคลิกคัดลอกอีเมลเพื่อความสะดวกในการติดต่อประสานงานค่ะ
+                            </p>
+                            
+                            <!-- Email Detail block -->
+                            <div class="bg-dark-950/80 rounded-2xl p-4 flex items-center justify-between gap-4 border border-zinc-800">
+                                <div class="flex items-center space-x-3 overflow-hidden">
+                                    <div class="w-10 h-10 rounded-lg bg-yellow-950 border border-brand-500/20 flex items-center justify-center text-brand-400 text-lg flex-shrink-0">
+                                        <i class="fa-regular fa-envelope"></i>
+                                    </div>
+                                    <div class="overflow-hidden">
+                                        <p class="text-[10px] text-zinc-500 uppercase tracking-wider font-semibold">Student Email</p>
+                                        <p id="email-text" class="text-sm font-semibold truncate text-zinc-200">691540005010-3@ksu.ac.th</p>
+                                    </div>
+                                </div>
+                                <button onclick="copyEmail()" class="px-4 py-2 bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-600 border border-zinc-700 rounded-xl text-xs font-semibold transition flex items-center space-x-1 text-zinc-200 flex-shrink-0">
+                                    <i id="copy-icon" class="fa-regular fa-copy"></i>
+                                    <span id="copy-text">คัดลอก</span>
+                                </button>
+                            </div>
+
+                            <!-- Success Toast Container inside card -->
+                            <div id="toast-success" class="hidden transition-all duration-300 ease-in-out bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs px-4 py-3 rounded-xl flex items-center space-x-2">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>คัดลอกที่อยู่อีเมลไปยังคลิปบอร์ดแล้ว!</span>
+                            </div>
+                        </div>
+
+                        <!-- Right Decorator -->
+                        <div class="w-36 h-36 rounded-2xl bg-zinc-950 border border-zinc-800 flex flex-col items-center justify-center text-center p-4">
+                            <div class="w-16 h-16 rounded-xl bg-brand-400 flex items-center justify-center text-dark-950 text-2xl font-extrabold mb-3 shadow-md shadow-brand-400/10">
+                                KK
+                            </div>
+                            <span class="text-xs text-zinc-300 font-semibold">รสกร คงพุท</span>
+                            <span class="text-[10px] text-brand-400 mt-0.5">ข้าวแก้ม</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-950 text-zinc-500 py-12 border-t border-zinc-900">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center text-dark-950 font-bold text-sm">
+                    KK
+                </div>
+                <span class="font-semibold text-zinc-300">Khaogam's Profile</span>
+            </div>
+            
+            <p class="text-xs text-zinc-600">
+                &copy; 2026 รสกร คงพุท. All Rights Reserved. ออกแบบด้วยความตั้งใจ
+            </p>
+        </div>
+    </footer>
+
+    <!-- Interactive JS Functions -->
+    <script>
+        function copyEmail() {
+            const email = "691540005010-3@ksu.ac.th";
+            
+            // Clipboard Copying Fallback method
+            const tempInput = document.createElement("input");
+            tempInput.value = email;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            
+            // UI Feedback update
+            const copyIcon = document.getElementById('copy-icon');
+            const copyText = document.getElementById('copy-text');
+            const toast = document.getElementById('toast-success');
+            
+            copyIcon.className = "fa-solid fa-check text-emerald-400";
+            copyText.textContent = "คัดลอกแล้ว!";
+            copyText.className = "text-emerald-400";
+            
+            toast.classList.remove('hidden');
+            
+            setTimeout(() => {
+                copyIcon.className = "fa-regular fa-copy";
+                copyText.textContent = "คัดลอก";
+                copyText.className = "text-slate-200";
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Change Header Background on Scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-dark-950/95', 'border-zinc-800');
+                header.classList.remove('bg-dark-950/80', 'border-zinc-800/50');
+            } else {
+                header.classList.remove('bg-dark-950/95', 'border-zinc-800');
+                header.classList.add('bg-dark-950/80', 'border-zinc-800/50');
+            }
+        });
+    </script>
+</body>
+</html>
